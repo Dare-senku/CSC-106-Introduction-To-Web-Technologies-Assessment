@@ -206,12 +206,9 @@ body::before {
 }
 
 .project-hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
-  gap: 2.5rem;
+  display: block;
   padding-bottom: 1.8rem;
   border-bottom: 1px solid rgba(255,255,255,0.08);
-  align-items: start;
 }
 
 .project-hero .hero-copy {
@@ -523,15 +520,31 @@ body::before {
 @media (max-width: 768px) {
   .header-inner {
     padding: 0.85rem 1rem;
+    flex-direction: column;
+    align-items: stretch;
   }
 
   .brand {
     font-size: 0.92rem;
   }
 
+  .main-nav {
+    width: 100%;
+  }
+
   .main-nav ul {
-    justify-content: center;
-    gap: 0.65rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.35rem;
+    justify-content: flex-start;
+  }
+
+  .main-nav a {
+    font-size: 0.82rem;
+    padding: 0.55rem 0.85rem;
+    margin: 0;
   }
 
   .main-nav a {
